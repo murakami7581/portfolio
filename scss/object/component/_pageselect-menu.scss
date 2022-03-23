@@ -1,0 +1,53 @@
+@use '../../global' as g;
+
+.p-header__container{
+    display: none;
+}
+
+.p-header__container.is-active{
+    width          : 100%;
+    height         : 100%;
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    z-index        : 1000;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+.p-header__menu{
+    width   : 100%;
+    height  : auto;
+    position: relative;
+    z-index : 100;
+}
+.c-header__image{
+    width                : 100%;
+    height               : 100%;
+    position             : absolute;
+    top                  : 0;
+    left                 : 0;
+    z-index              : 0;
+    background           : linear-gradient(rgba(0,0,0,1), rgba(51,0,51,1)),url(../image/main-visial.gif);
+    background-size      : cover;
+    background-repeat    : no-repeat;
+    background-position  : center center;
+    background-attachment: fixed;
+    background-blend-mode: screen ;
+    opacity: 0.99;
+    @include g.mq('tab') {
+        &::before{
+            content: "";
+            width: 100%;/* 横幅いっぱい */
+            height: 100vh;/* 縦幅いっぱい */
+            position: fixed;/* 擬似要素ごと固定 */
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+            background:linear-gradient(rgba(0,0,0,0.1), rgba(51,0,51,0.25)),url(../image/main-visial.gif)no-repeat center;
+            background-size: cover;/* cover指定できる */
+        }
+    }
+}
+

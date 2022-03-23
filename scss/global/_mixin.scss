@@ -1,0 +1,20 @@
+
+@use "variables" as var;
+
+$sizes: tab, tabsp, sp, sps;  //冒頭に使うサイズを明記するとわかりやすい
+
+  $breakpoint: ( 
+    'sps': 'screen and (max-width: 450px)',
+    'sp': 'screen and (max-width: 600px)',
+    'tabsp': 'screen and (max-width: 0px)',
+    'tab': 'screen and (max-width: 1024px)',
+  ) !default;
+  
+  //mixinを定義（初期値はmd）
+  @mixin mq($bp) {
+    @media #{map-get($breakpoint, $bp)} {
+      @content;
+    }
+  }
+
+

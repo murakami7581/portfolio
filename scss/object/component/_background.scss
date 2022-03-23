@@ -1,0 +1,24 @@
+@use '../../global' as g;
+
+.c-header__menu--bg{
+    background-color: rgba(0,0,0,0.1);
+    img{
+        @include g.mq('tab'){
+            background-color: rgba(0,0,0,0.125);
+        }
+    }
+    li{
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+.c-box__background{
+    background-image: url(../image/box__background.jpg);
+    background-size: cover;
+}
+.c-leftbox__background{
+    background-color: rgba(255,255,255,0.4);
+}
+
+.c-rightbox__background{
+    background-color: rgba(0,0,0,0.7);
+}

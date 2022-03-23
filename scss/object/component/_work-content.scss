@@ -1,0 +1,82 @@
+@use '../../global' as g;
+
+.c-work__image{
+    &::before,&::after{
+        content: "";
+        position        : absolute;
+        z-index         : 10;
+        background-image: url(../image/work-borderright.jpg);
+        background-size : cover;
+    }
+    &::before{
+        width : 3%;
+        height: 100%;
+        top   : 0;
+        right : 0;
+    }
+    &::after{
+        width : 100%;
+        height: 4%;
+        top   : 0;
+        left  : 0;
+    }
+}
+
+.c-section__works__image1{
+    position     : relative;
+    width        : 100%;
+    height       : 100%;
+    text-align   : right;
+    margin-bottom: 15%;
+    &::before,&::after{
+        content         : "";
+        position        : absolute;
+        z-index         : 10;
+        background-image: url(../image/work-borderleft.jpg);
+        background-size : cover;
+    }
+    &::before{
+        width : 3%;
+        height: 100%;
+        top   : 0%;
+        left  : 0%;
+    }
+    &::after{
+        width: 100%;
+        height: 4%;
+        top   : 97.5%;
+        left  : 0;
+    }
+}
+.wp-image-889,.wp-image-891,.wp-image-957{
+    width : 70%;
+    height: 100%;
+}
+.wp-block-image{
+    margin: 0;
+}
+.wp-block-columns{
+    margin-bottom: 0;
+}
+.c-work__link{
+    position     : relative;
+    display      : inline-block;
+    border-bottom: 3px solid #439bb5;
+    @include g.mq('tab'){
+        border-bottom: 1px solid #439bb5;
+    }
+    &:hover{
+        &::before{
+            content: "";
+            position: absolute;
+            top: 47.5%;   
+            left: -2vw;
+            transform: translateY(-50%);  
+            border: 10px solid transparent;
+            border-left: 16px solid #00FFFF; 
+            @include g.mq('tab'){
+                display: none;
+            }  
+        }
+    }
+}

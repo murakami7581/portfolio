@@ -1,0 +1,19 @@
+@use '../../global' as g;
+
+.p-hamburger{
+    width   : 8rem;
+    height  : 4rem;
+    position: fixed;
+    top     : 5%;
+    right   : 2.5%;
+    z-index : 1100;
+    @include g.mq('tab'){
+        width : 6rem;
+        height: 3rem;
+        right : 1%;
+    }
+    @include g.mq('sp'){
+        width : 4rem;
+        height: 2rem;
+    }
+}

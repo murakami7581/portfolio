@@ -1,0 +1,14 @@
+@use '../../global' as g;
+
+div {
+    p {
+      font-weight: bold;
+    }
+  }
+  
+  // 変数のテスト
+  $fontColor: #f0e0e0;
+  
+  h1 {
+    color: $fontColor;
+  }

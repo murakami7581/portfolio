@@ -1,0 +1,29 @@
+@use '../../global' as g;
+.p-botton__top{
+    position : absolute;
+    top      : 80%;
+    left     : 48.5%;
+    z-index  : 100;
+    transform: translate(-50%, -50%);
+    @include g.mq('tab'){
+        position       : static;
+        display        : flex;
+        justify-content: center;
+        transform      : translate(0);
+        margin-top     : 5rem;
+    }
+}
+.p-botton__bottom{
+    display        : flex;
+    justify-content: center;
+    margin-top     : 10rem;
+    @include g.mq('tab'){
+        margin-top: 7.5rem;
+    }
+    @include g.mq('tabsp'){
+        margin-top: 5rem;
+    }
+    @include g.mq('sp'){
+        margin-top: 5rem;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../global' as g;
+.p-section__center{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 15rem;
+    margin: 0 auto;
+    h1{
+        img{
+            width     : 80%;
+            margin-top: -5rem;
+            @include g.mq('tab'){
+                margin-top : 2.5rem;
+            } 
+            @include g.mq('sp'){
+                width: 65%;
+            } 
+        }
+    }
+}
+.p-skill{
+    @include g.mq('tab'){
+        position: absolute;
+    } 
+}

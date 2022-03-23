@@ -1,0 +1,48 @@
+@use '../../global' as g;
+
+.p-center__box{
+    width: 80%;
+    position: fixed;
+    top:92.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    color:#FFFFFF;
+    border: 3px double #CC99FF;
+    line-height: 1.25;
+    @include g.mq('tab'){
+        display: none;
+    }
+}
+
+.p-center__leftbox{
+    position: relative;
+    width: 30%;
+    
+}
+.p-center__rightbox{
+    width: 70%;
+    height: 100%;
+    h3{
+        padding: 0.5rem 0 1rem 0;
+        font-size: 3rem;
+        @include g.mq('tab'){
+            font-size: 2rem;
+        }
+        @include g.mq('sp'){
+            font-size: 1.5rem;
+        }
+    }
+    p{
+        font-size: 1.75rem;
+        padding: 1rem;
+        @include g.mq('tab'){
+            font-size: 1.5rem;
+        }
+        @include g.mq('sp'){
+            font-size: 1.35rem;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@use '../global' as g;
+//例
+*{ margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+html{ 
+  font-size: 62.5%; 
+}
+
+body { 
+  max-width               : 100%; 
+  height                  : auto;
+  color                   : #FFFFFF;
+  font-family             : "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background              : linear-gradient(rgba(0,0,0,1), rgba(51,0,51,0.9)),url(../image/main-visial.jpg);
+  background-size         : cover;
+  background-repeat       : no-repeat;
+  background-position     : center center;
+  background-attachment   : fixed;
+  background-blend-mode   : screen ;
+  margin                  : 0;
+  @include g.mq('tab') {
+    &::before{
+      width          : 100%;
+      height         : 100vh;
+      content        : "";
+      display        : block;
+      position       : fixed;
+      top            : 0;
+      left           : 0;
+      z-index        : -1;
+      background     :linear-gradient(rgba(0,0,0,0.1), rgba(51,0,51,0.25)),url(../image/main-visial.jpg)no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+.f-body{
+  position: relative;
+  &__background{
+    display : block;
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    z-index : 10;
+  }
+}
+
+#f-body__load {
+	width     : 100%;
+	height    : 100%;
+	position  : fixed;
+	top       : 0;
+	left      : 0;
+	z-index   : 9999;
+  background: radial-gradient(rgba(87,3,92,0.8),rgba(0, 0, 0,1)),url(../image/main-visial.jpg)no-repeat center;
+}
+
+.f-body__loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.f-body__cursor{
+  cursor: none;
+  @include g.mq('tab') {
+    cursor: auto;
+  }
+  &--smail,&--large{
+    position      : absolute;
+    z-index       : 10000;
+    transform     : translate(-50%, -50%);
+    border-radius : 100%;
+    pointer-events: none;
+    @include g.mq('tab'){
+      display: none;
+    }
+  }
+  &--smail {
+    width     : 25px;
+    height    : 25px;
+    background: #00dda2;
+    transition: width 0.05s, height 0.05s;
+  }
+  .f-body__cursor--smail.is-active {
+    width     : 40px;
+    height    : 40px;
+    background: #00dda2;
+  }
+  &--large {
+    width                     : 40px;
+    height                    : 40px;
+    border                    : solid 1px #00dda2;
+    transition                : top 0.05s, left 0.05s, width 0.5s, height 0.5s;
+    transition-timing-function: ease-out;
+  }
+  .f-body__cursor--large.is-active {
+    width : 75px;
+    height: 75px;
+  }
+}

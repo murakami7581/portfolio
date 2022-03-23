@@ -1,0 +1,93 @@
+@use '../../global' as g;
+
+.c-form{
+    width          : 100%;
+    height         : 4.5rem;
+    display        : flex;
+    justify-content: center;
+    font-size      : 2rem;
+    border         : 1px solid #CC99FF;
+    margin-bottom  : 2.5rem;
+    @include g.mq('tab'){
+        font-size: 1.5rem;
+    }
+    @include g.mq('sp'){
+        height       : 3rem;
+        font-size    : 1rem;
+        margin-bottom: 2rem;
+    }
+    &:hover>&__left{
+        background:linear-gradient(-135deg, rgba(235, 3, 235),rgba(68, 4, 68));
+    }
+    &__left{
+        width          : 50%;
+        display        : flex;
+        justify-content: left;
+        align-items    : center;
+        p{
+            padding-left: 1vw;
+            @include g.mq('tab'){
+                font-size: 1.5rem;
+            }
+            @include g.mq('sp'){
+                font-size: 1rem;
+            }
+        }
+    }
+    &__right{
+        width       : 50%;
+        display     : flex;
+        text-align  : left;
+        border-left : 1px solid #DCC2FF;
+        padding-left: 1vw;
+    }
+}
+
+.c-contact__submit{
+    width      : 60%;
+    height     : 6rem;
+    text-align : center;
+    font-size  : 3rem;
+    font-weight: bold;
+    border     : 1.5px solid #CC99FF;
+    margin     : 5rem auto;
+    @include g.mq('tab'){
+        height   : 4rem;
+        font-size: 2rem;
+        margin   : 3rem auto;
+    }
+    @include g.mq('sp'){
+        font-size: 1.25rem;
+    }
+    &:hover{
+        background:linear-gradient(-135deg, rgba(235, 3, 235),rgba(68, 4, 68));
+    }
+}
+.c-contact__message{
+    height: 7.5rem;
+}
+.wpcf7-form-control{
+    width : 100%;
+    height: 100%;
+}
+.wpcf7-form-control-wrap{
+    width   : 100%;
+    display : inline-block;
+    overflow: hidden;
+}
+
+.wpcf7-response-output{
+    font-size: 2rem;
+}
+::placeholder {
+    color: #DCC2FF;
+}
+.wpcf7-textarea{
+    padding: 2.5rem 0;
+    @include g.mq('tab'){
+        padding: 2.75rem 0;
+    }
+    @include g.mq('sp'){
+        padding: 3rem 0;
+    }
+}

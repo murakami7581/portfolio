@@ -1,0 +1,42 @@
+@use '../global' as g;
+
+.l-footer{
+    width          : 100%;
+    height         : 10rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    p{
+      width       : 31ch;
+      text-align  : center;
+      color       : #B384FF;
+      font        : bold 200% Consolas, Monaco, monospace;
+      font-weight : bold;
+      overflow    : hidden;
+      white-space : nowrap;
+      border-right: 2px solid transparent;
+      animation   : typing 5s steps(23) infinite, caret 1s steps(1) infinite;
+      @include g.mq('tab'){
+        font-size: 1.5rem;
+      }
+      @include g.mq('sp'){
+        font-size: 1rem;
+      }
+    }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes caret {
+  10% {
+    border-right-color: currentColor;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+@use '../../global' as g;
+
+.c-circle{
+    @include g.mq('tab'){
+        display: none;
+    }
+    &__leftimage{
+        width    : 40vw;
+        height   : auto;
+        opacity  : 0.35;
+        animation: 20s linear infinite rotation1;
+    }
+    &__rightimage{
+        width    : 50vw;
+        height   : auto;
+        position : absolute;
+        top      : 20%;
+        left     : 25%;
+        z-index  : -1;
+        opacity  : 0.3;
+        animation: 20s linear infinite rotation2;
+    }
+
+    }
+
+.c-center__title--sp{
+    display: none;
+    @include g.mq('tab'){
+        display   : block;
+        text-align: center;
+    }
+    img{
+        display: none;
+        @include g.mq('tab'){
+            width: 30%;
+            height: auto;
+            display: inline-block;
+            margin: 2rem 0 3rem 0;
+        }
+        @include g.mq('sp'){
+            width: 40%;
+        } 
+    }
+}
+.is-click{
+    display: block;
+}
+.p-circle1,
+.p-circle2,
+.p-circle3,
+.p-circle4,
+.p-circle5,
+.p-circle6,
+.p-circle7,
+.p-circle8{
+    position: absolute;
+    @include g.mq('tab'){
+        position           : static;
+        display            : flex;
+        justify-content    : center;
+        -webkit-perspective: 500px;
+        perspective        : 500px;
+    }
+
+}
+.p-circle1{
+    top : 51%;
+    left: 20.5%;
+}
+.p-circle2{
+    top : 18.5%;
+    left: 10%;
+}
+.p-circle3{
+    top : 28.5%;
+    left: 25%;
+}
+.p-circle4{  
+    top : 49%;
+    left: 37%;
+}
+.p-circle5{
+    top : 52.5%;
+    left: 53%;
+}
+.p-circle6{
+    top : 70%;
+    left: 30%;
+}
+.p-circle7{
+    top : 65%;
+    left: 7.5%;
+}
+.p-circle8{
+    top :85%;
+    left:0%;
+}
+.c-circle1__image,
+.c-circle2__image,
+.c-circle3__image,
+.c-circle4__image,
+.c-circle5__image,
+.c-circle6__image,
+.c-circle7__image,
+.c-circle8__image{
+    width    : 11vw;
+    height   : auto;
+    animation: 20s linear infinite rotation1;
+    @include g.mq('tab'){
+        width     : 12.5rem;
+        margin-top: 5rem;
+        animation : 0s linear infinite rotation1;
+        transform :rotateX(75deg);
+    }
+}
+@keyframes rotation1{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+}
+@keyframes rotation2{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(-360deg); }
+}
+
+.c-skill__center{
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%,-50%);
+    z-index      : 100;
+    border-radius: 50%;
+    background   : linear-gradient(-135deg, #333333, #9966CC);
+    padding      : 8px;
+    animation    : wave 2s linear infinite;
+    @include g.mq('tab'){
+        top      : 90%;
+        left     : 21%;
+        padding  : 30px;
+        transform: rotateX(75deg);
+    } 
+    &:hover{
+            position : absolute;
+            top      : 20%;
+            left     : 20%;
+            transform: translate(-50%,-50%);
+            padding  : 3.5vw;
+            transform: scaleY(0.2);
+            @include g.mq('tab'){
+                display: none;
+            } 
+        }
+        &:hover +.c-skill__shape{
+            display: block;
+            position: absolute;
+            top:5%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
+            @include g.mq('tab'){
+                display: none;
+            } 
+        }
+        &:hover ~.p-center__box{
+            display        : block;
+            display        : flex;
+            justify-content: space-between;
+            @include g.mq('tab'){
+                display: none;
+            } 
+    }
+}
+
+@keyframes wave {
+    0%{
+        box-shadow:  0 0 0 0 rgba(207,135,237, 0.6), 0 0 0 0 rgba(207,135,237,0.6);
+    }
+    30%{
+        box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 0 rgba(207,135,237,0.6);
+    }
+    65%{
+        box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
+    100%{
+        box-shadow:  0 0 0 0 rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
+}
+

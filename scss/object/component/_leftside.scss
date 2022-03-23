@@ -1,0 +1,27 @@
+@use '../../global' as g;
+
+.c-leftside{
+    &__text{
+        color      : #FFF;
+        font-size  : 1.5rem;    
+        font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+        @include g.mq('tab'){
+            font-size: 1rem;   
+        }
+    }
+    &__line{
+        width        : 90px;
+        height       : 10px;
+        border-right : 2px solid #FF3366;
+        border-bottom: 2px solid #FF3366;
+        transform    : skew(45deg);
+        @include g.mq('tab'){
+            width : 70px;
+            height: 5px;
+        }
+        @include g.mq('sp'){
+            width : 60px;
+            height: 5px;
+        }
+    }
+}

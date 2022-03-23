@@ -1,0 +1,70 @@
+@use '../../global' as g;
+
+.c-header__menu{
+    img{
+        width     : 50%;
+        height    : auto;
+        display   : block;
+        text-align: center;
+        margin    : 0 auto;
+        @include g.mq('sp'){
+            width: 75%;
+        }
+    }
+    ul{
+        display        : flex;
+        justify-content: space-between;
+        margin-top     : 15rem;
+        @include g.mq('tab'){
+            margin-top : 9rem;
+        }
+        @include g.mq('sp'){
+            display   : block;
+            margin-top: 7.5rem;
+        }
+        li{
+            width     : 100%;
+            height    : auto;
+            text-align: center;
+            @include g.mq('sp'){
+                margin-bottom: 2rem;
+            }
+            @include g.mq('sp'){
+                &::before{
+                    content    : "";
+                    position   : absolute;
+                    top        : 50%;   
+                    left       : -4rem;
+                    transform  : translateY(-50%);   
+                    border     : 15px solid transparent;
+                    border-left: 24px solid #00FFFF;  
+                }
+            }
+            a{
+                position   : relative;
+                font-size  : 5rem;
+                font-weight: bold;
+                @include g.mq('tab'){
+                    font-size: 3rem;
+                }
+                @include g.mq('sp'){
+                    font-size: 4rem;
+                }
+                &:hover{
+                    &::before{
+                        content    : "";
+                        position   : absolute;
+                        top        : 50%;   /* 縦軸をセンタリングする */ 
+                        left       : -4rem;
+                        transform  : translateY(-50%);   /* 縦軸をセンタリングする */  
+                        border     : 12.5px solid transparent;
+                        border-left: 20px solid #00FFFF;   /* 好みで色を変えてください */  
+                        @include g.mq('tab'){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

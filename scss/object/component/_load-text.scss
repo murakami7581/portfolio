@@ -1,0 +1,40 @@
+@use '../../global' as g;
+.c-load__text {
+  width          : 100%;
+  height         : 100%;
+  display        : flex;
+  justify-content: center;
+  align-items    : flex-end;
+  font-size      : 7.5rem;
+  font-weight    : bold;
+  span {
+    display      : inline-block;
+    margin       : 0 5px 15rem 5px;
+    @include g.mq('tab'){
+      font-size  : 3rem;
+    }
+    @for $i from 0 through 10 {
+      &:nth-child(#{$i + 1}) {
+        filter: blur(0px);
+        animation: blur-text 1.5s (#{$i/5})+s infinite linear alternate;
+      }
+    }
+  }
+}
+@keyframes blur-text {
+  0% {filter: blur(0px);}
+  100% {filter: blur(7px);}
+}
+
+@keyframes animateTheBodyBg {
+  from {
+    filter: hue-rotate(0deg)
+  }
+
+  to {
+    filter: hue-rotate(360deg)
+  }
+}
+
+
+

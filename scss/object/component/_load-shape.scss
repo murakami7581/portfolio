@@ -1,0 +1,86 @@
+@use '../../global' as g;
+// .c-load__shape{
+//   position     : absolute;
+//   top          : 0%;
+//   left         : 0%;
+//   bottom       : 0%;
+//   right        : 0%;
+//   border-radius: 50%;  
+//   box-sizing   : border-box;
+// }
+// .c-road__shape--animation1 {
+//   border-bottom: 5px solid #439bb5;
+//   animation    : rotate-one 5s linear infinite;
+// }
+// .c-road__shape--animation2 {
+//   border-right: 5px solid #439bb5;
+//   animation   : rotate-two 5s linear infinite;
+// }
+// .c-road__shape--animation3 {
+//   border-left: 5px solid #439bb5;
+//   animation : rotate-three 5s linear infinite;
+// }
+
+// .c-road__shape--animation4 {
+//   border-top: 5px solid #439bb5;
+//   animation : rotate-four 5s linear infinite;
+// }
+// .c-road__shape--animation5 {
+//   border-top: 5px solid #439bb5;
+//   animation : rotate-five 5s linear infinite;
+// }
+// .c-road__shape--animation6 {
+//   border-top: 5px solid #439bb5;
+//   animation : rotate-six 5s linear infinite;
+// }
+//   @keyframes rotate-one {
+//     0% {
+//       transform: rotateX(55deg) rotateY(-35deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(55deg) rotateY(-35deg) rotateZ(360deg);
+//     }
+//   }
+  
+//   @keyframes rotate-two {
+//     0% {
+//       transform: rotateX(60deg) rotateY(215deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(60deg) rotateY(215deg) rotateZ(360deg);
+//     }
+//   }
+  
+//   @keyframes rotate-three {
+//     0% {
+//       transform: rotateX(60deg) rotateY(-145deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(60deg) rotateY(-145deg) rotateZ(360deg);
+//     }
+//   }
+//   @keyframes rotate-four {
+//     0% {
+//       transform: rotateX(60deg) rotateY(325deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(60deg) rotateY(325deg) rotateZ(360deg);
+//     }
+//   }
+//   @keyframes rotate-five {
+//     0% {
+//       transform: rotateX(75deg) rotateY(0deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(75deg) rotateY(0deg) rotateZ(360deg);
+//     }
+//   }
+//   @keyframes rotate-six {
+//     0% {
+//       transform: rotateX(75deg) rotateY(180deg) rotateZ(0deg);
+//     }
+//     100% {
+//       transform: rotateX(75deg) rotateY(180deg) rotateZ(360deg);
+//     }
+//   }
+  

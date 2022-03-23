@@ -1,0 +1,15 @@
+@use '../../global' as g;
+
+.p-leftside{
+    position : fixed;
+    top      : 25%;
+    left     : 0vw;
+    z-index  : 10;
+    transform: rotate(90deg);
+    @include g.mq('tab'){
+        left: 0;
+    }
+    @include g.mq('sp'){
+        left: -2%;
+    }
+}

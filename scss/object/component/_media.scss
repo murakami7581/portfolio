@@ -1,0 +1,46 @@
+@use '../../global' as g;
+.c-section__topimage{
+  width   : 100%;
+  height  : auto;
+  position: relative;
+  &--pc{
+    width  : 100%;
+    height : auto;
+    @include g.mq('tab'){
+      display: none;
+    }
+  }
+  &--sp{
+    display: none;
+    @include g.mq('tab'){
+      display: block;
+      width : 100%;
+      height: auto;
+    }
+  }
+}
+.p-profile{
+  &__image--pc{
+    position: relative;
+    @include g.mq('tab'){
+      display: none;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+  }
+  &__image--sp{
+    display: none;
+    @include g.mq('tab'){
+        display: block;
+        img{
+            width        : 100%;
+            height       : auto;
+            display      : block;
+            margin-bottom: 10rem;
+        }
+    }
+  }
+}
+

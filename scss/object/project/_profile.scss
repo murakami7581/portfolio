@@ -1,0 +1,88 @@
+@use '../../global' as g;
+
+.p-profile{ 
+    h1{
+        img{
+            padding: 5% 0 0 5%;
+            @include g.mq('tab'){
+                width  : 50%;
+                padding: 5rem 0 0 0;
+            }
+        }
+        
+    }
+    &__content{
+        position : relative; 
+        max-width: 90%;
+        margin   : 0 auto;
+}
+    &__text{
+        position: absolute;
+        top     : 3%;
+        left    : 0;
+        @include g.mq('tab'){
+            width     : 100%;
+            position  : static;
+            display   : inline-block;
+            text-align: center;
+        }
+        img{
+            width        : 25vw;
+            height       : auto;
+            margin-bottom: 2.5vh;
+            @include g.mq('tab'){
+                display: none;
+            }
+        }
+    }
+}
+
+.wp-block-image{
+    margin: 0;
+}
+.c-select{
+    position   : relative;
+    font-size  : 2vw;
+    margin-left: 3.5vw;
+    @include g.mq('tab'){
+        margin-left: 0;
+    }
+    &__top,&__center,&__bottom{
+        width        : 75%;
+        height       : 100%;
+        position     : relative;
+        border-bottom: 1px solid #439bb5;
+        padding      : 0.5rem 0;
+        margin-bottom: 3rem;
+        @include g.mq('tab'){
+            display: none;
+        }
+        &:hover{
+            &::before{
+                content: "";
+                position: absolute;
+                top: 47.5%;   
+                left: -2vw;
+                transform: translateY(-50%);  
+                border: 10px solid transparent;
+                border-left: 16px solid #00FFFF;   
+            }
+        }
+    }
+}
+.c-profile__botton{
+    position  : relative;
+    z-index   : 1;
+    display   : block;
+    text-align: right;
+    padding   : 5% 5% 0 0;
+    @include g.mq('tab'){
+        padding: 0;
+    }
+    img{
+        width: 3rem;
+        height: auto;
+    }
+}
+
+
